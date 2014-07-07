@@ -2,7 +2,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-
 public class CustomHashSetTest {
 	CustomHashSet stuff;
 	
@@ -24,10 +23,11 @@ public class CustomHashSetTest {
 		assertFalse(isNewWord);
 	}
 	
-	@Test(timeout=300)
-	public void addLotsOfUniqueItems() {
+	@Test(timeout=2000)
+	public void addLotsOfUniqueWords() {
 		for(int i = 0; i < 1000000; i++){
-			stuff.add("this is the " + i + "th item");
+			RandomString rs = new RandomString(i%100+1);
+			stuff.add(new CanonicalWord(rs.nextString()));
 		}
 	}
 }
