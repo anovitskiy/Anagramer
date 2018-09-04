@@ -1,4 +1,4 @@
-#Exercise:
+# Coding Exercise
 
 Write a Java program that takes as it's input an arbitrarily long sequence of words where each word has arbitrary length and is limited to the 26 characters (a-z).  The output of this program is a boolean value for each input word.  TRUE if the word is an anagram of any of the previous inputs, and FALSE otherwise.  The program should read its input from a file of newline separated words and write its output to standard out.  The program should make efficient use of memory and perform well with large data sets.
 
