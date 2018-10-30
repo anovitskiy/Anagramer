@@ -6,6 +6,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 public class AnagramerTest {
+
+
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
 	@Before
@@ -20,7 +22,7 @@ public class AnagramerTest {
 
 	@Test
 	public void testMain() {
-		Anagramer.main(null);
+		Anagramer.main(new String[] {"src/test/java/input/words.txt"});
 		assertEquals("FALSE\nFALSE\nFALSE\nFALSE\nFALSE\nFALSE\nTRUE\nFALSE\nFALSE\nTRUE\nFALSE\nTRUE\nFALSE\n",outContent.toString());
 	}
 }

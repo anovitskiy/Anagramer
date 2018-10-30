@@ -6,9 +6,10 @@ import java.io.FileNotFoundException;
 public class Anagramer {
 	public static void main(String[] args) {
 		CustomHashSet words = new CustomHashSet(1000, 0.75);
+		String inputFilePath = args[0];
 
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("input/words.txt"));
+			BufferedReader br = new BufferedReader(new FileReader(inputFilePath));
 			try {
 				String line = br.readLine();
 				
